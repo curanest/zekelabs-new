@@ -20,6 +20,61 @@
             margin: auto;
 
         }
+
+        section
+{
+  background:white;
+}
+.banner
+{
+  background:red;
+  min-height:200px;
+}
+.banner .row
+{
+  text-align:center;
+  margin-top:50px;
+}
+.banner h1
+{
+  color:green;
+}
+
+
+
+/***********************************************************************
+*  OPAQUE NAVBAR SECTION
+***********************************************************************/
+.opaque-navbar {
+    background-color: white; 
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    /* transition: background-color .5s ease 0s;*/
+}
+
+
+ul.dropdown-menu {
+    background-color: black;
+}
+
+
+@media (max-width: 992px) {
+  body
+  {
+    background:red;
+    background-color:blue;
+  }
+  .opaque-navbar {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+
+}
+
+
+
+
         </style>
 
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -38,7 +93,6 @@
         <link href="static/css/style.css" rel="stylesheet">
         <link href="http://bootstraplovers.com/templates/assan-v2.5/landing-page/et-line-icons/style.css" rel="stylesheet">
         <link href="http://bootstraplovers.com/templates/assan-v2.5/landing-page/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
 
 
         <!--Start of Tawk.to Script-->
@@ -64,8 +118,37 @@ s0.parentNode.insertBefore(s1,s0);
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body style="background-color: transparent;">
-        <div class="top-bar ">
+    <body style="background-color:#FFFFFF">
+   
+<!--
+********************************************************************
+* Responsive Transparent Navbar
+********************************************************************
+-->
+<div class="navbar navbar-fixed-top opaque-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
+  <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
+    
+  </button>
+      <a class="navbar-brand" href="#">ZekeLabs</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="nav navbar-nav pull-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services and Pricing</a></li> 
+        <li><a href="#">Contact Us</a></li> 
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+     <div class="top-bar ">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
@@ -78,6 +161,7 @@ s0.parentNode.insertBefore(s1,s0);
                 </div>
             </div>
         </div>
+-->
         <!-- Static navbar  -->
        <!--  <nav class="navbar navbar-inverse navbar-static-top yamm" >
             <div class="container">
@@ -124,8 +208,8 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Solid team">
                         <!-- MAIN IMAGE -->
-                        <img src="static/img/background1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">  -->
-                        <!-- <img src="static/img/office-620822.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> --> -->
+                        <img src="static/img/background1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">  
+                        <!-- <img src="static/img/office-620822.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> --> 
 
 
 
@@ -258,73 +342,7 @@ s0.parentNode.insertBefore(s1,s0);
 
 
         <!--call to action-->
-        <div class="cta-skin">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <h3>A Better Education center</h3>
-                        <p>
-                            Thousands of teenagers across the India will have school lessons in mindfulness in an experiment designed to see if it can protect against mental illness.
-                        </p>
-                    </div>
-                    <div class="col-sm-4 text-right">
-                        <div class="space20"></div>
-                        <a href="#" class="btn btn-lg btn-border-white">Join Today <i class="fa fa-edit"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--end call to action-->
-        
-        
-                <!-- <div class="col-md-3 col-sm-6 margin-btm-30">
-                    <div class="blue-boxe">
-                        <i class="fa fa-graduation-cap"></i>
-                        
-                        <h3>Trending courses</h3>
-                        <p>
-
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                        </p>
-                        
-                        <a href="#">Learn More <i class="fa fa-caret-right"></i></a>
-                    </div><!--Blue Boxes-->
-                <!-- </div> <!--Col--> 
-                <!-- <div class="col-md-3 col-sm-6 margin-btm-30">
-                    <div class="blue-boxe">
-                        <i class="fa fa-users"></i>
-                        <h3>CERTIFIED TEACHERS</h3>
-                        <p>
-
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                        </p>
-                        <a href="#">Learn More <i class="fa fa-caret-right"></i></a>
-                    </div><!--Blue Boxes-->
-                <!-- </div> <!--Col--> 
-                <!-- <div class="col-md-3 col-sm-6 margin-btm-30">
-                    <div class="blue-boxe">
-                        <i class="fa fa-book"></i>
-                        <h3>BOOKS & LIBRARY</h3>
-                        <p>
-
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                        </p>
-                        <a href="#">Learn More <i class="fa fa-caret-right"></i></a>
-                    </div><!--Blue Boxes-->
-                <!-- </div> <!--Col--> 
-
-                <!-- <div class="col-md-3 col-sm-6 margin-btm-30">
-                    <div class="blue-boxe">
-                        <i class="fa fa-play"></i>
-                        <h3>Videos</h3>
-                        <p>
-
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                        </p>
-                        <a href="#">Learn More <i class="fa fa-caret-right"></i></a>
-                    </div><!--Blue Boxes-->
-                <!-- </div><!--Col--> 
-        <div class="space70"></div>
         <div class="container ">
             <div class="row">
                 <div class="center-heading margin-btm-50">

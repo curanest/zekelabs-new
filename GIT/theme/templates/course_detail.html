@@ -1,0 +1,23 @@
+{% extends "bases.html" %}
+{% load bootstrap3 %}
+
+
+<h1>Welcome</h1>
+{% block content %}
+<div class="container">
+{% for data in course %}
+  <br/><br/>
+  <h2>{{ data.title }}</h2><br/><br/>
+  <img src="/media/{{ data.image }}" height=100px></h2><br/><br/>
+ Trainer : {{ data.trainer }}<br/><br/>
+ SME:  {{ data.sme }}<br/><br/>
+ Level : {{ data.level }}<br/><br/>
+ Content : {{ data.content }}<br/><br/>
+ Duration : {{ data.duration }}<br/><br/>
+ Ongoing Batch: {{ data.ongoing_batch }}<br/><br/>
+ Upcomming Batch : {{ data.upcomming_batch }}<br/><br/>
+  {% endfor %}
+</div>
+<br/>
+<br/>
+ {% endblock %}

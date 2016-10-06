@@ -381,7 +381,7 @@ Top bar style
 
 /*url("../images/pattern.png")*/
 .navbar-inverse {
-  background-color: #eee;;
+  background-color: #3498DB;
   border: 0px;
   margin: 0px;
   padding: 0px 0; }
@@ -391,10 +391,10 @@ Top bar style
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 1px;
-    color: #eee; }
+    color: #FFFFFF; }
     .navbar-inverse .navbar-nav > li > a:hover {
       /*color: rgba(0, 0, 0, 0.1);*/
-       color : #FF0000;
+       color : #000000;
        background-color: #eee; }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
@@ -507,6 +507,7 @@ Top bar style
   .navbar-brand {
     height: 65px;
     line-height: 30px;
+    color: white;
      } }
 .navbar-brand > img {
   display: block;
@@ -515,7 +516,7 @@ Top bar style
 
 /***light navigation**/
 .navbar-default {
-  background-color : white;
+  color: white;
   border: 0px;
   margin: 0px;
   padding: 0px 0; }
@@ -523,11 +524,11 @@ Top bar style
     font-family: "Open Sans", Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 1px;
-    color: #333; }
+    color: white; }
     .navbar-default .navbar-nav > li > a:hover {
-      color: #333;
+      color: white;
       background-color: rgba(0, 0, 0, 0.1); }
 
 /**search form**/
@@ -878,7 +879,7 @@ Blog style
 Footer styles
 */
 .footer {
-  background-color: #222;
+  background-color: #3498DB;
   padding: 40px 0;
   padding-bottom: 0px; }
   .footer h3 {
@@ -896,7 +897,8 @@ Footer styles
     -ms-box-shadow: none;
     box-shadow: none; }
   .footer p {
-    color: #eee; }
+    color: white;
+    font-size: 16px; }
   .footer ul.f-list {
     margin: 0;
     padding: 0; }

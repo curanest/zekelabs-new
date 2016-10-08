@@ -23,7 +23,7 @@ class Courses(models.Model):
 		('Advance','advance'),
 		)
 
-	title = models.CharField(max_length=20)
+	title = models.CharField(max_length=70)
 	slug = models.CharField(max_length=20)
 	trainer = models.CharField(max_length=20)
 	sme = models.CharField(max_length=20)

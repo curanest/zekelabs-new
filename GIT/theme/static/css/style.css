@@ -1320,3 +1320,13 @@ accordions
 .testimonials .testi-slide .flex-control-paging li a.flex-active {
   background: #32c5d2;
 }
+
+.training-classroom a{background-color:#f5f5f5;color:#4c4c4c;display:block;text-decoration:none;padding:79px 20px 0;border-right:3px solid #fff;min-height:400px}.training-classroom a.corporate,.training-classroom a.virtual{background-color:#f2f2f2}
+   .training-classroom a.corporate{border-right:0 none}.course-content .course-item,.student-profile{border-right:1px solid #ebebeb}.training-classroom a h3{margin-bottom:23px;font-size:20px;color:#666}.training-classroom a:hover.classroom{background-color:#a29dbb}.training-classroom a:hover.virtual{background-color:#91ddb7}
+   .training-classroom a:hover.e-learning{background-color:#73cfda}.training-classroom a:hover.corporate{background-color:#eed86c}.training-classroom a span{width:110px;height:110px;display:inline-block;color:#fff;margin-bottom:30px}
+.classroom span{background-color:#8882a8}
+.virtual span{background-color:#52ca8d }
+.e-learning span{background-color:#3cbfcf}
+.corporate span{background-color:#e8c82e}
+
+.over-courses{background:url(../img/banner/courses-list.jpg) 50% 0 no-repeat fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;height:421px;position:relative}.over-courses h1{color:#fff;margin-bottom:40px}.over-courses span.header-caption{color:#fff;font-size:18px}.over-courses .course_enroll{margin:40px 0}.over-courses .course_enroll li{display:inline-block}

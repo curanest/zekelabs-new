@@ -14,23 +14,18 @@
                 <!-- Blog Post -->
 
 {% for data in course %}
-                <!-- Title -->
+
+                <!-- Preview Image -->
+                <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">
+                <hr>
+
                 <h1>{{data.title}}</h1>
 
                 <!-- Author -->
                 <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
-                </p>
-
-                <hr>
-
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
-
-                <hr>
-                <!-- Preview Image -->
-                <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">
-                <hr>
+                    <p class="lead">Instructed by : {{ data.trainer}}</p>
+                    <p class="lead">Subject Matter Experts : {{ data.sme }}</p> 
+                </p> 
 
                 <!-- Post Content -->
                 <blockquote>
@@ -69,12 +64,12 @@
             </div>
 
 
-            <div class="col-lg-3 lead">
+            <div class="col-lg-3 lead" style="background-color:#eee;" >
                 <ul class="nav nav-pills nav-stacked">
-                   <li><a href="#">Overview</a></li>
-                   <li><a href="#">Syllabus</a></li>
-                   <li><a href="#">Course Discussion</a></li>
-                   <li class="active"><a href="#">Enroll</a></li>
+                   <li><a href="#" class="text-center">Overview</a></li>
+                   <li><a href="#" class="text-center">Syllabus</a></li>
+                   <li><a href="#" class="text-center">Course Discussion</a></li>
+                   <li class="active"><br/><a href="#" class="text-center" style="padding:30px; font-weight:bolder; color: white">Enroll</a><br/></li>
                </ul>
             </div>
 

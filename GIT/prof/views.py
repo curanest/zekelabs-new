@@ -39,7 +39,5 @@ def register(request):
 
 
 def course_detail(request,course): 
-    print course
-    course = Courses.objects.filter(title=course)
-    print course
+    course = Courses.objects.filter(slug=course)
     return render(request, 'course_detail.html', locals()) 

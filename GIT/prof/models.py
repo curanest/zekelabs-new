@@ -24,9 +24,11 @@ class Courses(models.Model):
 		)
 
 	title = models.CharField(max_length=20)
+	slug = models.CharField(max_length=20)
 	trainer = models.CharField(max_length=20)
 	sme = models.CharField(max_length=20)
 	level = models.CharField(max_length=10,choices=level)
+	overview = models.TextField()
 	content = models.TextField()
 	image = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
 	duration = models.CharField(max_length=10)
@@ -34,4 +36,4 @@ class Courses(models.Model):
 	upcomming_batch=models.DateTimeField(auto_now=False)
 
 	def __unicode__(self):
-		return self.title + ' ' + self.content      
+		return self.title + ' ' + self.overview      

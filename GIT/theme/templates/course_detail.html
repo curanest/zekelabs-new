@@ -1,23 +1,85 @@
-{% extends "bases.html" %}
-{% load bootstrap3 %}
+{% extends "base.html" %}
+{% load static %}
 
-
-<h1>Welcome</h1>
 {% block content %}
-<div class="container">
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-9">
+
+                <!-- Blog Post -->
+
 {% for data in course %}
-  <br/><br/>
-  <h2>{{ data.title }}</h2><br/><br/>
-  <img src="/media/{{ data.image }}" height=100px></h2><br/><br/>
- Trainer : {{ data.trainer }}<br/><br/>
- SME:  {{ data.sme }}<br/><br/>
- Level : {{ data.level }}<br/><br/>
- Content : {{ data.content }}<br/><br/>
- Duration : {{ data.duration }}<br/><br/>
- Ongoing Batch: {{ data.ongoing_batch }}<br/><br/>
- Upcomming Batch : {{ data.upcomming_batch }}<br/><br/>
-  {% endfor %}
-</div>
-<br/>
-<br/>
+                <!-- Title -->
+                <h1>{{data.title}}</h1>
+
+                <!-- Author -->
+                <p class="lead">
+                    by <a href="#">Start Bootstrap</a>
+                </p>
+
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+
+                <hr>
+                <!-- Preview Image -->
+                <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">
+                <hr>
+
+                <!-- Post Content -->
+                <blockquote>
+                <em class="lead"><b>About the Course: </b>{{ data.overview }}</em>
+                <hr/>
+                <div class="row">
+                  <div class="col-md-1">
+                      <div class="text-right"> <img src="/static/img/assignments.svg"/> </div> 
+                  </div> 
+                  <div class="col-md-3">
+                      <strong>50+ Assignments</strong> 
+                      <p>Mentor assisted problem solving for better understanding</p>
+                  </div> 
+                  <div class="col-md-1">
+                       <div class="text-right"> <img src="/static/img/projects.svg"/>  </div> 
+                  </div> 
+                  <div class="col-md-3">
+                      <strong>4 Industry Level Projects</strong> 
+                      <p>Mentor guided projects completion for Deployment Level Understanding & Hands-on</p>
+                  </div>
+                  <div class="col-md-1">
+                       <div class="text-right"><img src="/static/img/certificate.svg"/>  </div> 
+                  </div> 
+                  <div class="col-md-3">
+                      <strong>Get Professional Certificates</strong> 
+                      <p>Avail Support & Mentorship for successful completion of certification</p>
+                  </div>
+                </div>
+                <hr/>
+                <p class="lead text-center">Syllabus</p>
+                <hr/>
+                <div class="lead">{{ data.content | safe }}</div>              
+                </blockquote>
+                <hr>
+
+            </div>
+
+
+            <div class="col-lg-3 lead">
+                <ul class="nav nav-pills nav-stacked">
+                   <li><a href="#">Overview</a></li>
+                   <li><a href="#">Syllabus</a></li>
+                   <li><a href="#">Course Discussion</a></li>
+                   <li class="active"><a href="#">Enroll</a></li>
+               </ul>
+            </div>
+
+           </div>
+
+    </div>
+ {% endfor %}
  {% endblock %}

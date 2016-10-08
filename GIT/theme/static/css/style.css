@@ -1019,39 +1019,6 @@ Staff
 /*
 accordions
 */
-.panel-group .panel {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  border-radius: 0px; }
-
-.panel-default > .panel-heading {
-  background: #fff; }
-
-.panel-title {
-  color: #209b60; }
-
-.panel-group .panel .panel-heading .panel-title a:before {
-  font-family: FontAwesome;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f107";
-  margin-right: 5px; }
-
-.panel-group .panel .panel-heading .panel-title a.collapsed:before {
-  content: "\f106"; }
-
-.pattern-bg {
-  background: url("http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/pattern.png") repeat left top scroll #FFF; 
-  /*background-color: #fff;*/
-  padding: 60px 0; }
-  .pattern-bg .center-heading h2, .pattern-bg .center-heading p {
-    color: #fff; }
-  .pattern-bg h3 {
-    color: #fff; }
-    .pattern-bg h3:after {
-      background-color: #fff; }
 
 .other-info {
   background: url("http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/pattern-2.png") repeat left top scroll #FFF; }

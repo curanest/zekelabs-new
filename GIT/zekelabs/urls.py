@@ -50,6 +50,7 @@ urlpatterns += [
     
     url(r'^webinar/(?P<slug>\w*)/$', profviews.get_webinar, name='get_webinar'),
     url(r'^webinar/$', profviews.show_webinars, name='show_webinars'),
+    url(r'^smes/$', profviews.show_smes, name='show_smes'),
     # url(r'^register',direct_to_template, {"template": "done.html"}, name="home"),
     # url("^register", direct_to_template, {"template": "index.html"}, name="home"),
 

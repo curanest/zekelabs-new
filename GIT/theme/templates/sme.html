@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+{% for data in smes %}
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-3">
+
+                <!-- Blog Post -->
+
+                <!-- Preview Image -->
+                <hr>
+                <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">
+                <hr>
+                <h2>{{data.name}}</h2>
+                <hr>
+              <div style="background-color:#eee;">
+                <ul class="nav nav-pills nav-stacked">
+                   <li><a href="#overview" class="text-center">Overview</a></li>
+                   <li><a href="#syllabus" class="text-center">Syllabus</a></li>
+                   <li><a href="#" class="text-center">Course Discussion</a></li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="col-lg-9">
+                <!-- Post Content -->
+                <blockquote>
+                <em id="overview" class="lead"><b>About the Expert: </b>{{ data.profile }}</em>
+                </blockquote>
+
+            </div>
+           </div>
+
+{% endfor %}
+<hr>
+    </div>
+ {% endblock %}

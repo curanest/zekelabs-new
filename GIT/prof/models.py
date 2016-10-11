@@ -85,4 +85,8 @@ class AdvCourses(models.Model):
         def __unicode__(self):
                 return self.title
 
-
+class SubjectMatterExpert(models.Model):
+       name = models.CharField(max_length=70)
+       profile = models.TextField()
+       image = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
+       subjects = models.TextField()

@@ -338,13 +338,13 @@ Top bar style
 */
 .top-bar {
   border-bottom: 1px solid #eee;
-  padding: 6px 0; }
+  padding: 2px 0; }
   .top-bar span {
     display: inline-block;
     line-height: 32px;
-    padding: 0px 10px; }
+    padding: 0px 1px; }
     .top-bar span a {
-      padding: 4px 10px;
+      padding: 2px 10px;
       background-color: #f5f5f5;
       font-size: 12px;
       line-height: 20px;

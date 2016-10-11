@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.forms import inlineformset_factory
-from .models import RegisterProfile,Courses, Event
+from .models import RegisterProfile,Courses, Event, SubjectMatterExpert
 from .forms import Register, RegisterCourse
  #,ImageForm
 from django.http import HttpResponseRedirect
@@ -67,7 +67,7 @@ def register_event(request,slug = None):
             print couponcode
             form.save()
             from_email = 'zekelabs@gmail.com'
-            msg = EmailMultiAlternatives(couponcode, 'From ' + mobile + ' ' + email + ' ' + message, from_email, ['zekelabs@gmail.com'])
+            msg = EmailMultiAlternatives(subject, 'From ' + mobile + ' ' + email + ' ' + couponcode, from_email, ['zekelabs@gmail.com'])
             msg.send()
             return render(request,'done.html',locals())
         return render(request,'notdone.html',locals())
@@ -88,4 +88,8 @@ def get_webinar(request,slug):
     print slug
     data = Event.objects.get(slug=slug)
     return render(request, 'webinar.html', locals())
-    
+   
+def show_smes(request):
+    smes = SubjectMatterExpert.objects.all()
+    return render(request, 'sme.html', locals())
+ 

@@ -7,14 +7,11 @@
     <!-- Page Content -->
     <div class="container">
 
+{% for data in events %}
         <div class="row">
 
             <!-- Blog Post Content Column -->
-            <div class="col-lg-9">
-
-                <!-- Blog Post -->
-
-{% for data in events %}
+            <div class="col-lg-3">
 
                 <!-- Preview Image -->
                 <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">

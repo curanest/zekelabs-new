@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load comment_tags %}
-{% load rating_tags %}
 {% block content %}
 
 
@@ -16,18 +14,11 @@
 
                 <!-- Blog Post -->
 
-{% for data in course %}
-
                 <!-- Preview Image -->
                 <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">
                 <hr>
-                {% rating_for data %}
                 <h1>{{data.title}}</h1>
 
-                <!-- Author -->
-                <p class="lead">
-                    <p class="lead">Subject Matter Experts : {{ data.sme }}</p> 
-                </p> 
 
                 <!-- Post Content -->
                 <blockquote>
@@ -94,11 +85,8 @@
                             <div class="form-group">
                                 <input type="text" name="mobile" class="form-control" placeholder="Mobile">
                             </div>
-                            <h5><span class="label label-default">Message</span></h5>
-                             <div class="form-group">
-                                <textarea rows="8" cols="50" placeholder="Message" name="message" class="form-control">
-
-                                </textarea>
+                            <div class="form-group">
+                                <input type="text" name="message" class="form-control" placeholder="Coupon Code">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-info btn-lg">Submit</button>
@@ -119,9 +107,6 @@
 
            </div>
 
-<h3>There are {{ data.comments_count }} comment{{ data.comments_count|pluralize }}</h3>
-{% comments_for data %}
 
     </div>
- {% endfor %}
  {% endblock %}

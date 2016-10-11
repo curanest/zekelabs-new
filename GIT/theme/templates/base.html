@@ -42,9 +42,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
     <![endif]-->
-        <link href="static/css/settings.css" rel="stylesheet" type="text/css" media="screen">
-        <link href="static/css/style.css" rel="stylesheet">
-        <link  href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static "css/settings.css" %}" rel="stylesheet" type="text/css" media="screen">
+        <link href="{% static "css/style.css" %}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
@@ -325,7 +324,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     <!-- Bootstrap Core JavaScript -->
 
-    <script src="static/js/bootstrap.min.js"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
 
     <script type="text/javascript">
        var width = 100;

@@ -41,10 +41,15 @@ urlpatterns += [
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^home$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^bases$", direct_to_template, {"template": "bases.html"}, name="bases"),
-    url(r'^register/$', profviews.register, name='register'),
+    url(r'^register/(?P<slug>\w*)/$', profviews.register, name='register'),
+    url(r'^register/$', profviews.register_generic, name='register_generic'),
+    url(r'^comments/', include('django_comments.urls')), 
     #url(r'^blogs/$', 'blogs.views.index'),
     #url(r'^(?P<slug>[\w\-]+)/$', 'blogs.views.post'),
     url(r'^courses/(?P<course>\w*)/$', profviews.course_detail, name='course_detail'),
+    
+    url(r'^webinar/(?P<slug>\w*)/$', profviews.get_webinar, name='get_webinar'),
+    url(r'^webinar/$', profviews.show_webinars, name='show_webinars'),
     # url(r'^register',direct_to_template, {"template": "done.html"}, name="home"),
     # url("^register", direct_to_template, {"template": "index.html"}, name="home"),
 

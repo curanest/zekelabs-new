@@ -198,7 +198,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(PROJECT_ROOT, "templates")
+            os.path.join(PROJECT_ROOT, "templates"), os.path.join(PROJECT_ROOT, "generic/includes")
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -251,11 +251,13 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "prof",
     "blogs",
+    #"django_comments"
     #"mezzanine.accounts",
 
     # "mezzanine.accounts",
     # "mezzanine.mobile",
 )
+
 
 ACCOUNTS_PROFILE_MODEL = "prof.UserProfile"
 
@@ -310,7 +312,6 @@ EMAIL_HOST_USER = 'curanest@gmail.com'
 EMAIL_HOST_PASSWORD = 'Armaan05' 
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True
-
 
 
 

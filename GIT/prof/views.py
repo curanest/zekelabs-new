@@ -10,6 +10,9 @@ from django.core.mail import EmailMultiAlternatives
 from django.views.generic import DetailView, TemplateView
 from django.shortcuts import get_object_or_404
 from django.forms import modelformset_factory
+
+from mezzanine.blog.models import BlogPost
+from django.db.models import Q
 # Create your views here.
 
 def register_generic(request):
@@ -92,4 +95,28 @@ def get_webinar(request,slug):
 def show_smes(request):
     smes = SubjectMatterExpert.objects.all()
     return render(request, 'sme.html', locals())
+
+
+def show_blogs(request):
+    blogs = BlogPost.objects.all()
+    return render(request, 'kbytes.html', locals())
+ 
+def show_blog(request,slug):
+    print slug
+    blog = BlogPost.objects.get(id=slug)
+    return render(request, 'kbyte.html', locals())
+ 
+def searchtag_blogs(request,slug = None):
+    if request.GET:
+       slug = request.GET["item"]
+    if slug:
+       blogs = BlogPost.objects.filter( Q(title__icontains=slug)| Q(content__icontains=slug))
+    else:
+       blogs = None
+    return render(request, 'search.html', locals())
+ 
+def show_blog_by_slug(request,slug):
+    print slug
+    blog = BlogPost.objects.get(slug=slug)
+    return render(request, 'kbyte.html', locals())
  

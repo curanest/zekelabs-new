@@ -39,12 +39,17 @@ urlpatterns += [
     # one out.
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    url('^blog/(?P<slug>\w*)/$', profviews.show_blog_by_slug, name='kbytes_slug'),
+    url("^test$", direct_to_template, {"template": "index-new.html"}, name="test"),
     url("^home$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^bases$", direct_to_template, {"template": "bases.html"}, name="bases"),
     url(r'^register/(?P<slug>\w*)/$', profviews.register, name='register'),
     url(r'^register/$', profviews.register_generic, name='register_generic'),
     url(r'^comments/', include('django_comments.urls')), 
-    #url(r'^blogs/$', 'blogs.views.index'),
+    url(r'^kbytes/$', profviews.show_blogs, name='show_blogs'),
+    url(r'^search/(?P<slug>\w*)/$', profviews.searchtag_blogs, name='search'),
+    url(r'^search/$', profviews.searchtag_blogs, name='search'),
+    url(r'^kbytes/(?P<slug>\w*)/$', profviews.show_blog, name='kbytes'),
     #url(r'^(?P<slug>[\w\-]+)/$', 'blogs.views.post'),
     url(r'^courses/(?P<course>\w*)/$', profviews.course_detail, name='course_detail'),
     
